@@ -12,12 +12,28 @@ DELTA = {
     pg.K_RIGHT: (+5, 0),
 }
 
+
+
+
 # def gameover(screen: pg.Surface) -> None
+"""
+1行目：画面を生成する
+2行目：色を黒に変える
+3行目：透明度の調整
+"""
 #     bb_img = pg.Surface((WIDTH, HEIGHT))
 #     bb_img.set_colorkey((0, 0, 0))
 #     bb_img.Surface.set_alpha(0)
 
 # def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
+"""
+1行目：10段階の変化
+2行目：爆弾サイズの変化
+3行目：爆弾の生成
+4行目：リストにbb_imgを格納
+5行目：1～10のまでの数字のリストをを作る
+
+"""
 #     for r in range(1, 11):
 #         bb_img = pg.Surface((20*r, 20*r))
 #         pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r) 
@@ -26,6 +42,9 @@ DELTA = {
 #         return bb_img, bb_accs
 
 # def get_kk_imgs() -> dict[tuple[int, int], pg.Surface]
+"""
+画像の回転を行う関数
+"""
 #     kk_dict = {
 #         ( 0, 0): rotozoom(kk_img,) # キー押下がない場合
 #         (+5, 0): rotozoom(???) # 右
@@ -33,6 +52,8 @@ DELTA = {
 #         ( 0,-5): rotozoom(pg.K_UP) # 上... 
 #   }
 
+#def calc_orientation(org: pg.Rect, dst: pg.Rect, current_xy: tuple[float, float])-> tuple[float, float]
+    #org dict
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def check_bound(rct: pg.Rect) ->tuple[bool, bool]:
